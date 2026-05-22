@@ -1,0 +1,11 @@
+2026-05-22 10:00:01 INFO  System initialization complete.
+2026-05-22 10:00:05 INFO  sshd service started on port 22.
+2026-05-22 10:01:12 Connection received from 10.20.5.42 on port 49231.
+2026-05-22 10:01:15 WARNING Invalid credentials submitted for user 'root' from 10.20.5.42.
+2026-05-22 10:02:45 Connection received from 10.20.12.18 on port 51102.
+2026-05-22 10:02:48 INFO  Successful login for user 'viora' from 10.20.12.18.
+2026-05-22 10:03:22 WARNING Session timeout for user 'viora' after 300 seconds.
+2026-05-22 10:04:10 Connection received from 192.168.1.105 on port 38412.
+2026-05-22 10:04:13 CRITICAL Brute force pattern detected from IP 192.168.1.105.
+2026-05-22 10:05:00 INFO  Automated firewall rule deployed: Dropping traffic from 192.168.1.105.
+2026-05-22 10:06:01 INFO  Daily system metric rotation completed successfully.
