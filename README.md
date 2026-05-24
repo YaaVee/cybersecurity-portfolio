@@ -13,3 +13,8 @@
 * **Implementation:** `03-devops-cloud-security/lab-03-container-orchestration-hardening/run-vault-secrets-injection.sh`
 * **Defensive Controls:** Eliminates persistent plaintext credential risks by deploying a dynamic runtime injection framework modeled on HashiCorp Vault. Workloads leverage short-lived tokens to authenticate and query memory-encrypted key-value paths governed by explicit access control lists (ACLs).
 * **Audit Artifacts:** Outputs system access tracking states to `vault_secrets_audit.json` and evaluates permissions through `web-infrastructure-secrets-policy.hcl`.
+
+### Domain G: Mutual TLS (mTLS) Service-to-Service Authentication
+* **Implementation:** `03-devops-cloud-security/lab-03-container-orchestration-hardening/run-mtls-handshake-verification.sh`
+* **Defensive Controls:** Implements zero-trust network boundary protections by mandating cryptographically bound Mutual TLS (mTLS) handshakes for all lateral service communications. Utilizes unique X.509 certificate identities and SPIFFE data schemas validated against an internal root Certificate Authority, enforcing cipher encapsulation (`TLS_AES_256_GCM_SHA384`) to neutralize sniffing and packet manipulation threats.
+* **Audit Artifacts:** Outputs network connection telemetry states to `mtls_handshake_audit.json` and evaluates configurations using `web-infrastructure-mtls-config.json`.
