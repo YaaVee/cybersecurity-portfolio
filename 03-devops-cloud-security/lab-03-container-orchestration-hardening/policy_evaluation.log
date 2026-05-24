@@ -1,0 +1,7 @@
+=================================================================
+  POLICY FAILURE: High/Critical Vulnerabilities Detected        
+  Evaluation Date: 2026-05-24 08:56:55                 
+=================================================================
+[-] CRITICAL ASSURANCE FAILURE: Image contains unmitigated CVE flags.
+[-] Action: Deployment block triggered. Rectify dependencies.
+[-] POLICY STATUS: FAILED
