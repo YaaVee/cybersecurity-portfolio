@@ -45,3 +45,4 @@ To construct a shift-left validation framework that programmatically checks infr
 
 ---
 * **Lab 3.5: Image Vulnerability Gate** - Implemented automated CVE layer scanning and policy enforcement logic to block non-compliant base images.
+* **Lab 3.5: Image Vulnerability Gate** - Implemented automated CVE layer scanning and policy enforcement logic to block non-compliant base images.
