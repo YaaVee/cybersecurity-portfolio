@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-05-24T10:46:35Z",
+  "policy_name": "web-infrastructure-hardened",
+  "lsm_framework": "AppArmor",
+  "status": "LOADED_VALID",
+  "enforced_restrictions": {
+    "sys_admin_blocked": true,
+    "raw_network_sockets_denied": true,
+    "proc_sys_write_protection": "ENABLED"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-24T11:10:52Z",
+  "policy_package": "infrastructure.compliance",
+  "engine": "Open Policy Agent (OPA)",
+  "input_source": "docker-compose.yml",
+  "evaluation_results": {
+    "violation_root_user": false,
+    "violation_privileged_mode": false,
+    "policy_allow_status": true
+  },
+  "audit_decision": "PASS"
+}

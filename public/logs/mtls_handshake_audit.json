@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-24T11:05:58Z",
+  "protocol": "TLSv1.3",
+  "handshake_status": "SUCCESSFUL",
+  "cipher_suite": "TLS_AES_256_GCM_SHA384",
+  "client_identity": {
+    "subject": "CN=web-egress-service,O=Viora Enterprise",
+    "spiffe_id": "spiffe://viora.internal/ns/production/sa/web-egress",
+    "issuer": "Viora Enterprise Internal Root CA"
+  },
+  "server_identity": {
+    "subject": "CN=database-backend,O=Viora Enterprise",
+    "spiffe_id": "spiffe://viora.internal/ns/production/sa/database-backend",
+    "issuer": "Viora Enterprise Internal Root CA"
+  },
+  "traffic_encryption": "ENFORCED"
+}
