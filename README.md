@@ -18,3 +18,8 @@
 * **Implementation:** `03-devops-cloud-security/lab-03-container-orchestration-hardening/run-mtls-handshake-verification.sh`
 * **Defensive Controls:** Implements zero-trust network boundary protections by mandating cryptographically bound Mutual TLS (mTLS) handshakes for all lateral service communications. Utilizes unique X.509 certificate identities and SPIFFE data schemas validated against an internal root Certificate Authority, enforcing cipher encapsulation (`TLS_AES_256_GCM_SHA384`) to neutralize sniffing and packet manipulation threats.
 * **Audit Artifacts:** Outputs network connection telemetry states to `mtls_handshake_audit.json` and evaluates configurations using `web-infrastructure-mtls-config.json`.
+
+### Domain H: Automated Compliance-as-Code Auditing (OPA/Rego)
+* **Implementation:** `03-devops-cloud-security/lab-03-container-orchestration-hardening/run-compliance-audit.sh`
+* **Defensive Controls:** Implements automated, shift-left configuration auditing by translating enterprise security guardrails into declarative Rego policy files. The validation engine programmatically inspects deployment definitions to block configuration drift, ensuring unprivileged execution context compliance before deployment cycles complete.
+* **Audit Artifacts:** Generates structured compliance tracking metrics inside `compliance_audit_report.json` based on constraints defined in `container_policy.rego`.

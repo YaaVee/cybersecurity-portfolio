@@ -49,3 +49,4 @@ To construct a shift-left validation framework that programmatically checks infr
 * **Lab 3.6: LSM Kernel Hardening** - Deployed custom AppArmor profiles to intercept dangerous system calls and reduce container attack surface boundaries.
 * **Lab 3.7: Secure Secrets Management** - Integrated programmatic runtime secrets extraction with explicit token-based ACL policy controls.
 * **Lab 3.8: Mutual TLS (mTLS) Boundaries** - Configured a cryptographic mutual authentication handshake layer mapping identities to SPIFFE specifications.
+* **Lab 3.9: Compliance-as-Code (OPA)** - Deployed declarative Rego policy blocks to programmatically audit infrastructure definitions against security rules.
