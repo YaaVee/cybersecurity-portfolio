@@ -1,0 +1,21 @@
+#include <tunables/global>
+
+profile web-infrastructure-hardened flags=(attach_disconnected) {
+  #include <abstractions/base>
+
+  # Enforce default deny for system configuration files
+  deny /sys/** w,
+  deny /proc/** w,
+  deny /etc/** w,
+
+  # Block dangerous raw network operations and mounting capabilities
+  deny capability net_raw,
+  deny capability sys_admin,
+  deny capability sys_chroot,
+  
+  # Allow standard application execution bounds
+  /usr/bin/** rmix,
+  /bin/** rmix,
+  /lib/** r,
+  /lib64/** r,
+}

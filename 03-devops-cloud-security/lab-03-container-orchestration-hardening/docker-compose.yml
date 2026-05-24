@@ -1,44 +1,19 @@
-services:
-  secure-db:
-    image: postgres:15-alpine
-    container_name: production-secured-db
-    environment:
-      POSTGRES_USER: admin_devsec
-      POSTGRES_PASSWORD: HighSecuredCompliancePassword2026!
-      POSTGRES_DB: app_vault
-    volumes:
-      - db_backend_data:/var/lib/postgresql/data
-    networks:
-      - database-tier-isolated
-    user: "70:70"
-    deploy:
-      resources:
-        limits:
-          cpus: '0.50'
-          memory: 512M
-
-  secure-app:
-    image: nginx:alpine
-    container_name: frontend-isolated-app
-    ports:
-      - "8085:80"
-    networks:
-      - web-public-tier
-      - database-tier-isolated
-    read_only: true
-    tmpfs:
-      - /var/cache/nginx
-      - /var/run
-    depends_on:
-      - secure-db
+version: "3.8"
 
 networks:
-  web-public-tier:
-    driver: bridge
-  database-tier-isolated:
-    driver: bridge
+  backend-tier:
     internal: true
 
-volumes:
-  db_backend_data:
-    driver: local
+services:
+  web-infrastructure:
+    image: alpine:latest
+    container_name: production_web_egress
+    user: "70:70"
+    read_only: true
+    security_opt:
+      - apparmor:web-infrastructure-hardened
+    mem_limit: 256m
+    cpus: 0.5
+    networks:
+      - backend-tier
+    command: /bin/sh -c "while true; do sleep 3600; done"
