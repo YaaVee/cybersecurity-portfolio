@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-05-25T02:25:31Z",
+  "governance_engine": "Terraform Sentinel",
+  "target_cloud": "AWS",
+  "policy_evaluation": "PASSED",
+  "resource_compliance_status": "ENCRYPTED_DB_ENABLED",
+  "audit_decision": "ALLOW_DEPLOYMENT"
+}

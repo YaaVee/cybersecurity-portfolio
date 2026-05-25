@@ -23,3 +23,20 @@
 * **Implementation:** `03-devops-cloud-security/lab-03-container-orchestration-hardening/run-compliance-audit.sh`
 * **Defensive Controls:** Implements automated, shift-left configuration auditing by translating enterprise security guardrails into declarative Rego policy files. The validation engine programmatically inspects deployment definitions to block configuration drift, ensuring unprivileged execution context compliance before deployment cycles complete.
 * **Audit Artifacts:** Generates structured compliance tracking metrics inside `compliance_audit_report.json` based on constraints defined in `container_policy.rego`.
+---
+
+## 🛡️ Security Engineering Evidence Vault
+*Verified architectural audit logs and technical schematics for hardened infrastructure.*
+
+### 📋 Infrastructure Audit Logs
+* [Kernel LSM Hardening](https://viora-portfolio.vercel.app/logs/kernel_hardening_audit.json)
+* [Secrets Management](https://viora-portfolio.vercel.app/logs/vault_secrets_audit.json)
+* [mTLS Handshake Audit](https://viora-portfolio.vercel.app/logs/mtls_handshake_audit.json)
+* [Compliance-as-Code Report](https://viora-portfolio.vercel.app/logs/compliance_audit_report.json)
+
+### 📊 Architectural Schematics
+![Kernel LSM Hardening](https://raw.githubusercontent.com/YaaVee/cybersecurity-portfolio/main/public/images/kernel-lsm-schematic.png)
+![Secrets Management](https://raw.githubusercontent.com/YaaVee/cybersecurity-portfolio/main/public/images/vault-secrets-schematic.png)
+![mTLS Governance](https://raw.githubusercontent.com/YaaVee/cybersecurity-portfolio/main/public/images/mtls-governance-schematic.png)
+![OPA Compliance Gate](https://raw.githubusercontent.com/YaaVee/cybersecurity-portfolio/main/public/images/opa-compliance-schematic.png)
+* **Lab 4.0: IaC Security (Terraform/Sentinel)** - Established policy-as-code guardrails for cloud provisioning.

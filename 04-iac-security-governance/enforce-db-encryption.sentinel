@@ -1,0 +1,9 @@
+import "tfplan/v2" as tfplan
+
+# Define a rule that requires encryption for all RDS instances
+main = rule {
+    all tfplan.resource_changes as _, resources {
+        resources.type is "aws_db_instance" and
+        resources.change.after.storage_encrypted is true
+    }
+}
