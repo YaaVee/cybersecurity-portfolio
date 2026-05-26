@@ -1,49 +1,24 @@
-# Security Engineering: Unified Architectural Framework
+# Unified Security Engineering Framework
 
-This framework provides an end-to-end implementation of a hardened, audit-ready security stack. The architecture integrates low-level OS security, cryptographic identity, and continuous compliance governance.
+## Executive Summary
+This framework provides an end-to-end implementation of an autonomous security stack, aligned with NIST CSF 2.0. It bridges the gap between infrastructure hardening, automated SOC response, and continuous adversarial validation.
 
-## Architectural Index
-
-| Lab ID | Domain | Focus Area | Artifact Path |
-| :--- | :--- | :--- | :--- |
-| **3.5** | E | Kernel Surface Reduction (LSM) | `/logs/kernel_hardening_audit.json` |
-| **3.6** | D | Vulnerability Management | `/logs/image_vulnerability_report.json` |
-| **3.7** | F | Secrets Management (Vault) | `/logs/vault_secrets_audit.json` |
-| **3.8** | G | mTLS Service Authentication | `/logs/mtls_handshake_audit.json` |
-| **3.9** | H | Compliance-as-Code (OPA) | `/logs/compliance_audit_report.json` |
-| **4.0** | - | IaC Governance (Sentinel) | `/logs/iac_compliance_report.json` |
-| **5.0** | - | Threat Detection (SOC/SIEM) | `/logs/soc_incident_report.json` |
-
----
-
-## Detailed Implementation Domains
-
-### Lab 3.5 / Domain E: Kernel Surface Reduction & LSM
-* **Controls:** Enforces `AppArmor` profiles to strip `CAP_SYS_ADMIN` and `CAP_NET_RAW`. Denies write access to host structures.
-
-### Lab 3.6 / Domain D: Vulnerability Management & Governance
-* **Controls:** Automated pre-orchestration CVE parsing and CVSS metric enforcement.
-
-### Lab 3.7 / Domain F: Cryptographic Secrets Management
-* **Controls:** Dynamic runtime injection using short-lived tokens and memory-encrypted K/V paths.
-
-### Lab 3.8 / Domain G: Mutual TLS (mTLS) Zero-Trust
-* **Controls:** Cryptographically bound mTLS handshakes via internal CA and SPIFFE identities.
-
-### Lab 3.9 / Domain H: Compliance-as-Code (OPA/Rego)
-* **Controls:** Declarative configuration auditing to prevent structural drift and privilege regression.
-
-### Lab 4.0: Infrastructure-as-Code (IaC) Governance
-* **Controls:** Sentinel policy interception for cloud resource provisioning, ensuring encryption and least-privilege by default.
-
-### Lab 5.0: Automated SOC & Threat Detection
-* **Controls:** Real-time log ingestion from Endian Firewall (10.20 segment) with anomaly detection triggers.
+## Master Index
+| Lab ID | Function | Focus Area |
+| :--- | :--- | :--- |
+| 3.5 | Protect | Kernel LSM Hardening |
+| 3.6 | Identify | Vulnerability Management |
+| 3.7 | Protect | Secrets Management (Vault) |
+| 3.8 | Protect | mTLS Zero-Trust |
+| 3.9 | Govern | Compliance-as-Code |
+| 4.0 | Govern | IaC Sentinel Governance |
+| 5.0 | Detect | SOC/SIEM Observability |
+| 6.0 | Respond | Automated Self-Healing |
+| 7.0 | Recover | Continuous Validation (CSV) |
+| 8.0 | Recover | Predictive Zero-Trust |
+| 9.0 | Protect | Creative Arts Integrity (SRI/CSP) |
+| 10.0 | Detect | Adversarial Validation (BlackArch) |
 
 ---
-
-## Technical Evidence & Schematics
-[Access Live Security Artifacts (JSON)](https://viora-portfolio.vercel.app/logs/index)
-
-![System Architecture](https://raw.githubusercontent.com/YaaVee/cybersecurity-portfolio/main/public/images/master-architecture-summary.png)
-
-*Copyright 2026, Viora Yaba Mensah. All Rights Reserved.*
+*Verified Security Architecture for Enterprise Deployment.*
+*Copyright 2026, Viora Yaba Mensah.*
